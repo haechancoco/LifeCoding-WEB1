@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <h1>HTTP</h1>
     <ol id="toc-list">
@@ -17,108 +19,105 @@
 
     <hr>
 
-    <div class="info-box">
+    <div class="subtopic">
         <h2 id="work">작동방식</h2>
         <p>
             기본 매커니즘은 클라이언트가 서버에게 요청하면, 서버가 응답하는 형식이다.
         </p>
     </div>
 
-    <div class="info-box">
         <h2 id="part1 port">포트</h2>
         <p>
             총 0 ~ 65,535개의 포트가 있으며, 0 ~ 1,023번 포트에 서비스를 실행할려면 관리자 권한이 필요하다. <br>
             따라서 클라이언트는 이 대역에서 실행 중인 서비스들은 관리자의 것이라고 신뢰할 수 있다. <br>
             포트는 일반적으로 TCP/80 또는 TCP/8080 이다.
         </p>
-    </div>
 
 
-    <div class="info-box">
-        <h2 id="part head-bod">HTTP 메시지</h2>
-        <p>
-            HTTP 메시지에는 클라이언트가 전송하는 HTTP 요청, 그리고 서버가 반환하는 HTTP 응답이 있다. <br>
-            이 둘은 기능과 세부 구조에서 차이가 있지만, HTTP 헤더와 바디로 구성된다는 공통점이 있다.
-        </p>
-        
-        <h3>HTTP 헤더</h3>
-        <p>
-            첫 줄은 시작 줄(Start line), 나머지 줄은 헤더(Header)라고 한다.
-        </p>
-        <p>
-            시작 줄의 역활은 요청과 응답에서 큰 차이가 있다. 나중에 추가.
-        </p>
-        <p>
-            HTTP 메시지는 모든 줄이 CRLF로 끝나는 규칙을 가지고 있다.
-            Start-line 그리고 Headers 각 줄마다 끝에 CRLF 가 붙는다. <br>
-            그리고 헤더의 끝을 알리기 위해 마지막에 CRLF 가 한번 더 붙는다.
-        </p>
-        <p>
-            헤더는 <strong>필드</strong>와 <strong>값</strong>으로 구성되며(필드이름: 값) HTTP 메시지 또는 바디의 속성을 나타낸다. <br>
-            하나의 HTTP 메시지에는 0개 이상의 헤더가 있을 수 있다.
-        </p>
 
-        <h3>HTTP 바디</h3>
-        <p>
-            HTTP 바디는 헤드의 끝을 나타내는 CRLF 뒤 모든 줄을 말한다.
-            클라이언트나 서버에게 전송하려는 데이터가 바디에 담긴다.
-        </p>
-        <img src="./images/head-body-explain.png">
-    </div>
+    <h2 id="part head-bod">HTTP 메시지</h2>
+    <p>
+        HTTP 메시지에는 클라이언트가 전송하는 HTTP 요청, 그리고 서버가 반환하는 HTTP 응답이 있다. <br>
+        이 둘은 기능과 세부 구조에서 차이가 있지만, HTTP 헤더와 바디로 구성된다는 공통점이 있다.
+    </p>
 
-    <div class="info-box">
-        <h2>HTTP 요청</h2>
-        <p>
-            HTTP 요청은 서버에게 특정 동작을 요구하는 메시지이다.
-        </p>
+    <h3>HTTP 헤더</h3>
+    <p>
+        첫 줄은 시작 줄(Start line), 나머지 줄은 헤더(Header)라고 한다.
+    </p>
+    <p>
+        시작 줄의 역활은 요청과 응답에서 큰 차이가 있다. 나중에 추가.
+    </p>
+    <p>
+        HTTP 메시지는 모든 줄이 CRLF로 끝나는 규칙을 가지고 있다.
+        Start-line 그리고 Headers 각 줄마다 끝에 CRLF 가 붙는다. <br>
+        그리고 헤더의 끝을 알리기 위해 마지막에 CRLF 가 한번 더 붙는다.
+    </p>
+    <p>
+        헤더는 <strong>필드</strong>와 <strong>값</strong>으로 구성되며(필드이름: 값) HTTP 메시지 또는 바디의 속성을 나타낸다. <br>
+        하나의 HTTP 메시지에는 0개 이상의 헤더가 있을 수 있다.
+    </p>
 
-        <h3>시작 줄</h3>
-        <p>
-            HTTP 요청의 시작 줄은 <strong>메소드(Method)</strong>, <strong>요청 대상(Request target)</strong>, 그리고 <strong>HTTP 버전</strong>으로 구성된다.
-            각각은 띄어쓰기로 구분된다. 
-        </p>
-        <p>
-            <b>메소드</b>는 요청 대상에 대해 서버가 수행하길 바라는 동작을 나타낸다.
-            HTTP 표준에 정의된 메소드는 8개가 있다. <br>
-            1. OPTIONS <br>
-            2. GET <br>
-            3. HEAD <br>
-            4. POST <br>
-            5. PUT <br>
-            6.DELETE <br>
-            7. TARCE <br>
-            8. CONNECT <br>
-        </p>
-        <p>
-            <b>요청 대상(URL)</b>는 메소드의 대상을, <br>
-            <b>HTTP 버전</b>은 클라이언트가 사용하는 HTTP 프로토콜의 버전을 나타낸다.
-        </p>
-    </div>
+    <h3>HTTP 바디</h3>
+    <p>
+        HTTP 바디는 헤드의 끝을 나타내는 CRLF 뒤 모든 줄을 말한다.
+        클라이언트나 서버에게 전송하려는 데이터가 바디에 담긴다.
+    </p>
+    <img src="./images/head-body-explain.png">
 
-    <div class="info-box">
-        <h2>HTTP 응답</h2>
-        <p>
-            <strong>HTTP 응답</strong>은 HTTP 요청에 대한 결과를 반환하는 메시지입니다. <br>
-            요청을 수행했는지, 하지 않았는지, 안 했다면 이유는 무엇인지와 같은 상태 정보(Status),
-            그리고 클라이언트에게 전송할 리소스가 응답에 포함된다.
-        </p>
-        <h3>시작 줄</h3>
-        <p>
-            HTTP 응답의 시작 줄은
-            <strong>HTTP 버전</strong>,
-            <strong>상태 코드</strong>,
-            그리고
-            <strong>처리 사유</strong>로
-            구성됩니다. <br>
-            각각은 띄어쓰기로 구분됩니다.
-        </p>
-        <p>
-            <b>HTTP 버전</b>은 서버에서 사용하는 HTTP 프로토콜의 버전을 나타냅니다. 그리고 <br>
-            <b>상태 코드</b>는 요청에 대한 처리 결과를 <strong>세 자릿수</strong>로 나타냅니다.
-        </p>
 
-    </div>
+    <h2>HTTP 요청</h2>
+    <p>
+        HTTP 요청은 서버에게 특정 동작을 요구하는 메시지이다.
+    </p>
+
+    <h3>시작 줄</h3>
+    <p>
+        HTTP 요청의 시작 줄은 <strong>메소드(Method)</strong>, <strong>요청 대상(Request target)</strong>, 그리고 <strong>HTTP
+            버전</strong>으로 구성된다.
+        각각은 띄어쓰기로 구분된다.
+    </p>
+    <p>
+        <b>메소드</b>는 요청 대상에 대해 서버가 수행하길 바라는 동작을 나타낸다.
+        HTTP 표준에 정의된 메소드는 8개가 있다. <br>
+        1. OPTIONS <br>
+        2. GET <br>
+        3. HEAD <br>
+        4. POST <br>
+        5. PUT <br>
+        6.DELETE <br>
+        7. TARCE <br>
+        8. CONNECT <br>
+    </p>
+    <p>
+        <b>요청 대상(URL)</b>는 메소드의 대상을, <br>
+        <b>HTTP 버전</b>은 클라이언트가 사용하는 HTTP 프로토콜의 버전을 나타낸다.
+    </p>
+
+
+    <h2>HTTP 응답</h2>
+    <p>
+        <strong>HTTP 응답</strong>은 HTTP 요청에 대한 결과를 반환하는 메시지입니다. <br>
+        요청을 수행했는지, 하지 않았는지, 안 했다면 이유는 무엇인지와 같은 상태 정보(Status),
+        그리고 클라이언트에게 전송할 리소스가 응답에 포함된다.
+    </p>
+    <h3>시작 줄</h3>
+    <p>
+        HTTP 응답의 시작 줄은
+        <strong>HTTP 버전</strong>,
+        <strong>상태 코드</strong>,
+        그리고
+        <strong>처리 사유</strong>로
+        구성됩니다. <br>
+        각각은 띄어쓰기로 구분됩니다.
+    </p>
+    <p>
+        <b>HTTP 버전</b>은 서버에서 사용하는 HTTP 프로토콜의 버전을 나타냅니다. 그리고 <br>
+        <b>상태 코드</b>는 요청에 대한 처리 결과를 <strong>세 자릿수</strong>로 나타냅니다.
+    </p>
+
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
