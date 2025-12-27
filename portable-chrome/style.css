@@ -1,0 +1,37 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1px;
+}
+header h1 {
+    margin: 0;
+}
+
+main>section {
+    padding: 0 30px;
+}
+.display-code {
+    margin: 8px 16px;
+    border-radius: 8px;
+}
+.display-code--type {
+    background-color: #d3e3fd69;
+    padding: 16px;
+    margin-bottom: 1px;
+    border-radius: 8px 8px 0 0;
+}
+.display-code--content {
+    background-color: #d3e3fd69;
+    padding: 16px;
+    margin-bottom: 1px;
+    border-radius: 0 0 8px 8px;    
+}
+
