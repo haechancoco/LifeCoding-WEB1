@@ -1,37 +1,68 @@
 *, *::after, *::before {
     box-sizing: border-box;
+    padding: 0;
     margin: 0;
 }
+
 body {
-    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
 header {
     background-color: #000;
     color: #fff;
-    padding: 1px;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 header h1 {
-    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
-main>section {
-    padding: 0 30px;
+main {
+    max-width: 890px;
+    padding: 0 32px;
+    margin: 0 auto;
 }
-.display-code {
-    margin: 8px 16px;
+
+.subtopic {
+    margin-bottom: 40px;
+}
+.subtopic h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    /* color: #1a73e8; 구글 블루 포인트 컬러 */
+}
+.subtopic p {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+.code-block {
+    margin: 8px;
     border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
-.display-code--type {
+.code-block__header {
     background-color: #d3e3fd69;
-    padding: 16px;
+    padding: 10px 16px;
     margin-bottom: 1px;
     border-radius: 8px 8px 0 0;
 }
-.display-code--content {
+.code-block__body {
     background-color: #d3e3fd69;
     padding: 16px;
     margin-bottom: 1px;
-    border-radius: 0 0 8px 8px;    
+    border-radius: 0 0 8px 8px;
+    overflow-x: auto;
+}
+
+pre code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
 }
 
