@@ -22,22 +22,18 @@ main {
 }
 
 
-div.example-cover {
+div.example__cover {
     background-color: #E7E9EB;
     padding: 0px 10px 10px;
     margin: 5px;
     border-radius: 8px;
 }
-
-div.example-content {
+div.example__preview {
     background-color: #fff;
     padding: 1px 0;
     border-radius: 8px;
 }
 
-/* .example-content :is(ol, ul) {
-    margin: 0;
-} */
 
 
 .features {
@@ -46,4 +42,15 @@ div.example-content {
     margin: 0;
     display: grid;
     gap: 12px;
+}
+.features li {
+    padding: 16px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+.features li::before {
+    content: "✔";
+    color: #04AA6D;
+    margin-right: 12px;
 }
