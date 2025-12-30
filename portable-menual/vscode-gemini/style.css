@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #007acc;
+    --bg-color: #f3f4f6;
+    --text-color: #333;
+    --code-bg: #1e1e1e;
+    --code-text: #d4d4d4;
+    --note-bg: #e7f3ff;
+    --note-border: #2196f3;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #444;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.step {
+    margin-bottom: 40px;
+}
+
+.command-box {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    margin: 10px 0;
+}
+
+.file-content {
+    background-color: #fdf6e3;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Consolas', monospace;
+    white-space: pre-wrap;
+}
+
+.explanation {
+    background-color: var(--note-bg);
+    border-left: 4px solid var(--note-border);
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+.explanation strong {
+    color: #0d47a1;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.highlight {
+    color: #d32f2f;
+    font-weight: bold;
+}
