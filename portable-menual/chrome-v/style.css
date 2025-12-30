@@ -1,0 +1,114 @@
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --accent-color: #2c3e50;
+    --code-bg: #282c34;
+    --code-text: #abb2bf;
+    --highlight: #e06c75;
+    --string: #98c379;
+}
+
+body {
+    font-family: 'Segoe UI', AppleSDGothicNeo, 'Malgun Gothic', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin-top: 30px;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 24px;
+    background-color: #3498db;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.step-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+pre {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #d63384;
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.comment {
+    color: #5c6370;
+    font-style: italic;
+}
+
+.command {
+    color: #61afef;
+}
+
+.string {
+    color: var(--string);
+}
+
+.parameter {
+    color: #d19a66;
+}
+
+.warning {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 15px;
+    margin: 15px 0;
+    color: #856404;
+    font-size: 0.9rem;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
