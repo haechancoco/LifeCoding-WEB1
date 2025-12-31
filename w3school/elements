@@ -4,3 +4,11 @@
 <blockquote>	Defines a section that is quoted from another source
 <cite>	Defines the title of a work
 <q>	Defines a short inline quotation
+<style>	Defines style information for an HTML document </style>
+<link>	Defines a link between a document and an external resource
+<a>	Defines a hyperlink
+    
+<img>	Defines an image
+<map>	Defines an image map
+<area>	Defines a clickable area inside an image map
+<picture>	Defines a container for multiple image resources
