@@ -36,7 +36,7 @@ EOF
 # 3-2. 생성한 스크립트에 실행 권한 부여
 chmod +x "$PROGRAM_DIR/opt/google/chrome/run-chrome.sh"
 
-# 4. .desktop 파일 생성
+# 4-1. .desktop 파일 생성
 echo "Setting default browser..."
 cat << EOF > "$APP_DIR/$APP_NAME"
 [Desktop Entry]
@@ -51,6 +51,9 @@ MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme
 StartupNotify=true
 Terminal=false
 EOF
+
+# 4-2. .desktop 파일 바탕화면에 복사
+cp "$APP_DIR/$APP_NAME" "$HOME/Desktop"
 
 # 5-1 데스크톱 데이터베이스 갱신
 update-desktop-database "$APP_DIR"
