@@ -1,4 +1,19 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:system",
-    "python-envs.pythonProjects": []
+    "python-envs.pythonProjects": [],
+
+    "settings.cycle": [
+        {
+            "id": "zoomToggle",
+            "overrideWorkspaceSettings": false,
+            "values": [
+                {
+                    "window.zoomLevel": 1
+                },
+                {
+                    "window.zoomLevel": 4
+                }
+            ]
+        }
+    ]
 }
