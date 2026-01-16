@@ -1,0 +1,25 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding-left: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: aliceblue;
+}
+
+main {
+    padding-left: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+/* 줄바꿈 금지 */
+.nobreak {
+    white-space: nowrap;
+}
