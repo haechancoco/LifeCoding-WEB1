@@ -1,0 +1,5 @@
+/* style.css */
+.text-muted {
+    color: #707070; /* 옅은 회색 */
+    font-size: 0.9em; /* (선택사항) 설명이니까 글씨도 살짝 작게 */
+}

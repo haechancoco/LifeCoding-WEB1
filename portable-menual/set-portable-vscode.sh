@@ -57,6 +57,33 @@ echo "setting to default program..."
 xdg-mime default portable-vscode.desktop x-scheme-handler/vscode
 
 
+# ==========================================
+# 5. 확장 프로그램 자동 설치
+# ==========================================
+echo ">>> 확장 프로그램 설치를 시작합니다..."
+
+# 설치할 확장 프로그램 ID 목록 (띄어쓰기로 구분하거나 줄바꿈)
+# 필요한 것들을 여기에 추가하세요.
+EXT_LIST=(
+    "formulahendry.auto-close-tag"              # Auto Close Tag
+    "formulahendry.auto-rename-tag"             # Auto Rename Tag
+    "vincaslt.highlight-matching-tag"           # Highlight Matching Tag
+    "ecmel.vscode-html-css"                     # HTML CSS Support    
+    "solnurkarim.html-to-css-autocompletion"    # HTML to CSS autocompletion
+    "ritwickdey.liveserver"                     # Live Server
+    "vscode-icons-team.vscode-icons"            # vscode-icons
+    "eamodio.gitlens"                           # Git Lens
+)
+
+for ext in "${EXT_LIST[@]}"; do
+    echo "  - 설치 중: $ext ..."
+    # Portable 실행 파일을 이용해 설치 명령 수행
+    # 1.85 버전 호환성을 위해 --force 옵션을 주면 좋지만, 
+    # 버전이 안 맞으면 자동으로 호환 버전을 찾거나 실패할 수 있습니다.
+    "$PROGRAM_DIR/code" --install-extension "$ext" --no-sandbox --force
+done
+
+
 
 
 
