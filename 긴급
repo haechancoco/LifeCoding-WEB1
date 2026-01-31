@@ -1,0 +1,100 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #000;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.header--title {
+    color: #ffffff;
+}
+
+
+
+.explain {
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.explain--title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.explain--para {
+    margin: 20px 0;
+}
+
+.explain--dsc-list {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 10px 20px; 
+    align-items: baseline; 
+}
+.explain--dsc-list dt {
+    font-weight: bold;
+    grid-column: 1; 
+}
+.explain--dsc-list dd {
+    grid-column: 2;
+}
+
+
+
+
+
+.table {
+    text-align: left;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.table tr {
+    border: solid 1px rgb(204, 204, 204)
+}
+.table :where(th, td) {
+    padding: 8px 18px;
+}
+
+
+
+.note {
+    --note-line-height: 1.6;
+    --icon-size: 18px;
+
+    background-color: rgb(236, 244, 254);
+    padding: 16px;
+    border-left: 3px solid rgb(4, 76, 159);
+    border-radius: 4px;
+    
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+.note p {
+    line-height: var(--icon-size);
+
+    flex: 1;
+}
+.note::before {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    margin-top: 4px;
+
+    background-color: #000;
+
+    -webkit-mask-image: url('./icon/note--icon.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url('./icon/note--icon.svg');
+}
+
+
+
