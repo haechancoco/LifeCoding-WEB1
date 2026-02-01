@@ -16,7 +16,7 @@
 
 
 .explain {
-    padding-left: 20px;
+    padding: 0 20px;
     margin-bottom: 40px;
 }
 
@@ -57,6 +57,43 @@
 }
 .table :where(th, td) {
     padding: 8px 18px;
+}
+
+
+
+.note {
+    --note-line-height: 1.6;
+    --icon-size: 18px;
+
+    background-color: rgb(236, 244, 254);
+    padding: 16px;
+    border-left: 3px solid rgb(4, 76, 159);
+    border-radius: 4px;
+    
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+.note p {
+    line-height: var(--icon-size);
+
+    flex: 1;
+}
+.note::before {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    margin-top: 4px;
+
+    background-color: #000;
+
+    -webkit-mask-image: url('./icon/note--icon.svg');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: url('./icon/note--icon.svg');
 }
 
 
