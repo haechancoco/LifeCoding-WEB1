@@ -14,21 +14,23 @@
 }
 
 
+/* ############# */
+/* #  explain  # */
+/* ############# */
 
 .explain {
+    --margin: 40px;
     padding: 0 20px;
-    margin-bottom: 40px;
+    margin-bottom: var(--margin);
 }
-
 .explain--title {
     font-size: 32px;
     margin-bottom: 10px;
 }
-
 .explain--para {
+    line-height: 1.7rem;
     margin: 20px 0;
 }
-
 .explain--dsc-list {
     display: grid;
     grid-template-columns: auto 1fr; 
@@ -42,12 +44,23 @@
 .explain--dsc-list dd {
     grid-column: 2;
 }
+.explain::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 1px;
+    background-color: rgb(117, 117, 117);
+
+    margin-top: var(--margin);
+}
 
 
-
-
-
+/* ##### */
+/* table */
+/* ##### */
 .table {
+    --bg-color: rgb(221, 221, 221);
     text-align: left;
     border-collapse: collapse;
     margin: 20px 0;
@@ -58,6 +71,9 @@
 .table :where(th, td) {
     padding: 8px 18px;
 }
+/* .table tr:nth-child(even){
+    background-color: var(--bg-color);
+} */
 
 
 
@@ -74,8 +90,9 @@
     gap: 30px;
     align-items: flex-start;
 }
-.note p {
-    line-height: var(--icon-size);
+
+.note--para {
+    line-height: var(--note-line-height);
 
     flex: 1;
 }
@@ -90,10 +107,13 @@
 
     background-color: #000;
 
-    -webkit-mask-image: url('./icon/note--icon.svg');
+    -webkit-mask-image: url('./icons/note--icon.svg');
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
-    mask-image: url('./icon/note--icon.svg');
+
+    mask-image: url('./icons/note--icon.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
 }
 
 

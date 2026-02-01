@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Table</title>
-    <link rel="stylesheet" href="../../styles/style.css">
-    <link rel="stylesheet" href="../../styles/text.css">
+    <link rel="stylesheet" href="../../styles/style/style.css">
+    <link rel="stylesheet" href="../../styles/text/text.css">
 </head>
 
 <body>
@@ -69,7 +69,77 @@
                 </tbody>
             </table>
         </section>
-
+        <section class="explain"> <!-- caption -->
+            <h2 class="explain--title">&lt;caption&gt;</h2>
+            <p>
+                <strong class="text-emph">&lt;caption&gt;</strong>은
+                표의 설명 또는 제목을 나타냅니다.
+            </p>
+            <p class="explain--para">
+                <strong class="text-emph">&lt;caption&gt;</strong>은
+                <span class="text-bgcolor">&lt;table&gt;</span>의 첫 번째 자식이어야 합니다.
+            </p>
+        </section>
+        <section class="explain"> <!-- colgroup -->
+            <h2 class="explain--title">&lt;colgroup&gt;</h2>
+            <p class="explain--para">
+                <strong class="text-emph">&lt;colgroup</strong>은
+                테이블의 열 집합을 정의합니다.
+            </p>
+            <table class="table">
+                <tr>
+                    <th>Attribute</th>
+                    <th>설명</th>
+                    <th>속성값</th>
+                    <th>의미</th>
+                </tr>
+                <tr>
+                    <td>span</td>
+                    <td>연속적으로 얼마만큼의 열을 차지할 지를 결정합니다</td>
+                    <td>0이 아닌 양의 정수 <span class="text-muted">기본값: 1</span></td>
+                    <td>속성값 만큼의 열을 차지함</td>
+                </tr>
+            </table>
+            <div class="note">
+                <p class="note--para">
+                    <strong>Note:</strong>
+                    <span class="text-bgcolor">&lt;colgroup&gt;</span>에 <span class="text-bgcolor">&lt;col&gt;</span> 태그가 하나라도 있을 시
+                    이 속성은 허용되지 않습니다.
+                </p>
+            </div>
+        </section>
+        <section class="explain"> <!-- col -->
+            <h2 class="explain--title">&lt;col&gt;</h2>
+            <p class="explain--para">
+                <strong class="text-emph">&lt;col&gt;</strong>은
+                열 집합 내에서 1개 이상의 열을 정의합니다.
+            </p>
+            <p class="explain--para">
+                <strong class="text-emph">&lt;col&gt;</strong>은
+                <span class="text-bgcolor">&lt;colgroup&gt;</span>을
+                부모로 두어야 합니다.
+            </p>
+            <table class="table">
+                <tr>
+                    <th>Attribute</th>
+                    <th>설명</th>
+                    <th>속성값</th>
+                    <th>의미</th>
+                </tr>
+                <tr>
+                    <td>&lt;span&gt;</td>
+                    <td>연속적으로 얼마만큼의 열을 차지할 지를 결정합니다</td>
+                    <td>0이 아닌 양의 정수 <span class="text-muted">기본값: 1</span></td>
+                    <td>속성값 만큼의 열을 차지함</td>
+                </tr>
+            </table>
+            <div class="note">
+                <p class="note--para">
+                    <strong>Note:</strong>
+                    <span class="text-bgcolor">span</span> 속성이 없는 <span class="text-bgcolor">&lt;colgroup&gt;</span>에서만 작동합니다.
+                </p>
+            </div>
+        </section>
         <section class="explain"> <!-- th -->
             <h2 class="explain--title">&lt;th&gt;</h2>
             <table class="table">

@@ -5,6 +5,13 @@
     padding: 0 4px;
 }
 
+.text-bgcolor {
+    background-color: rgba(222, 222, 222, 0.3);
+    font-weight: normal;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
 .text-muted {
     color: #999;
     font-size: 0.9rem;
